@@ -1,5 +1,18 @@
 #include <iostream>
 
+int verifica_parametro(char* param)
+{
+  if (std::string(param) != "add")
+  {
+    std::cout << "O primeiro parametro deve ser 'add'" << std::endl;
+    return -1;
+  }
+  else 
+  {
+    return 0;
+  }
+}
+
 int main(int argc, char* argv[])
 {
   std::string mensagem;
@@ -10,21 +23,14 @@ int main(int argc, char* argv[])
   }
   if (argc == 2)
   {
-    if (std::string(argv[1]) != "add")
-    {
-      std::cout << "O primeiro parametro deve ser 'add'" << std::endl;
-      return -1;
-    }
+    if (verifica_parametro(argv[1]) != 0) return -1;
     std::cout << "Digite a mensagem: ";
     std::getline(std::cin, mensagem);
+    std::cout << "Mensagem adicionada." << std::endl;
   }
   if (argc >= 3)
   {
-    if (std::string(argv[1]) != "add")
-    {
-      std::cout << "O primeiro parametro deve ser 'add'" << std::endl;
-      return -1;
-    }
+    if (verifica_parametro(argv[1]) != 0) return -1;
     mensagem = argv[2];
     std::cout << "Mensagem adicionada." << std::endl;
   }
