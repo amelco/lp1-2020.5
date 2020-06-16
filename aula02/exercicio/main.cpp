@@ -18,10 +18,15 @@ int main(int argc, char* argv[])
     std::cout << "Digite a mensagem: ";
     std::getline(std::cin, mensagem);
   }
-  if (argc >= 3 && std::string(argv[1]) == "add")
+  if (argc >= 3)
   {
+    if (std::string(argv[1]) != "add")
+    {
+      std::cout << "O primeiro parametro deve ser 'add'" << std::endl;
+      return -1;
+    }
     mensagem = argv[2];
+    std::cout << "Mensagem adicionada." << std::endl;
   }
-  std::cout << "Mensagem adicionada." << std::endl;
   return 0;
 }
