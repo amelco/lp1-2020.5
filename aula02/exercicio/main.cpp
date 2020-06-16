@@ -10,6 +10,11 @@ int main(int argc, char* argv[])
   }
   if (argc == 2)
   {
+    if (std::string(argv[1]) != "add")
+    {
+      std::cout << "O primeiro parametro deve ser 'add'" << std::endl;
+      return -1;
+    }
     std::cout << "Digite a mensagem: ";
     std::getline(std::cin, mensagem);
   }
