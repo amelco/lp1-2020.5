@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
     std::cout << "Digite a mensagem: ";
     std::getline(std::cin, mensagem);
   }
-  if (argc >= 3)
+  if (argc >= 3 && std::string(argv[1]) == "add")
   {
     mensagem = argv[2];
   }
