@@ -7,7 +7,7 @@
 #define EXEC_LIST  3
 #define ERROR      4
 
-#define DEBUG std::cout << "m,e""aqui" << std::endl;
+#define DEBUG std::cout << "aqui" << std::endl;
 
 /* Cabeçalho das funções */
 void show_usage(const std::string& prog_name);
