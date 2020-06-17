@@ -12,13 +12,11 @@
 /* Cabeçalho das funções */
 void show_usage(const std::string& prog_name);
 int check_action(const std::string& action);
-void write_in_file(const std::string& message, std::ofstream& output_file);
+void write_in_file(const std::string& message);
 
 
 int main(int argc, char* argv[])
 {
-  std::ofstream output_file{"diario.txt", std::ios::app};
-
   if (argc == 1)
   {
     show_usage(argv[0]);
@@ -50,7 +48,7 @@ int main(int argc, char* argv[])
     {
       std::cout << "Informe a mensagem:" << std::endl;
       std::getline(std::cin, message);
-      write_in_file(message, output_file);
+      write_in_file(message);
       std::cout << "Mensagem Adicionada!" << std::endl;
       return 0;
     }
@@ -81,7 +79,7 @@ int main(int argc, char* argv[])
     if (result == EXEC_ADD)
     {
       message = argv[2];
-      write_in_file(message, output_file);
+      write_in_file(message);
       std::cout << "Mensagem Adicionada!" << std::endl;
       return 0;
     }
@@ -113,8 +111,9 @@ int check_action(const std::string& action)
   return ERROR;
 }
 
-void write_in_file(const std::string& message, std::ofstream& output_file)
+void write_in_file(const std::string& message)
 {
+  std::ofstream output_file{"diario.txt", std::ios::app};
   output_file << message << std::endl;
   output_file.close();
 }
