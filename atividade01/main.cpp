@@ -15,7 +15,6 @@
 void show_usage(const std::string& prog_name);
 int  check_action(const std::string& action);
 int  write_in_file(const std::string& message);
-
 std::string format_current_date(const std::string &format);
 std::string get_current_date();
 std::string get_current_time();
@@ -61,17 +60,13 @@ int main(int argc, char* argv[])
     if (result == EXEC_LIST)  // lista mesnagens do diario
     {
       std::ifstream input_file{OUTPUT_FILE};
-      if (!input_file.is_open())
-      {
-          std::cout << "Arquivo não existente ou sem permissão para leitura." << std::endl;
-          return 1;
-      }
-
       std::string line;
+      std::string date = "# " + get_current_date();
       while(!input_file.eof())
       {
         getline(input_file, line);
-        std::cout << line << std::endl;
+
+        if (line.size() != 0 && line[0] != '#') std::cout << line << std::endl;
       }
 
       input_file.close();
