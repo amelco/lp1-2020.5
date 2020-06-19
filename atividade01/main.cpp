@@ -3,10 +3,11 @@
 #include <string>
 #include <fstream>
 
-#define SHOW_USAGE 1
-#define EXEC_ADD   2
-#define EXEC_LIST  3
-#define ERROR      4
+#define SHOW_USAGE  1
+#define EXEC_ADD    2
+#define EXEC_LIST   3
+#define ERROR       4
+#define OUTPUT_FILE "diario.md"
 
 #define DEBUG std::cout << "aqui" << std::endl;
 
@@ -18,6 +19,7 @@ int  write_in_file(const std::string& message);
 std::string format_current_date(const std::string &format);
 std::string get_current_date();
 std::string get_current_time();
+
 
 int main(int argc, char* argv[])
 {
@@ -58,7 +60,7 @@ int main(int argc, char* argv[])
     }
     if (result == EXEC_LIST)  // lista mesnagens do diario
     {
-      std::ifstream input_file{"diario.txt"};
+      std::ifstream input_file{OUTPUT_FILE};
       if (!input_file.is_open())
       {
           std::cout << "Arquivo não existente ou sem permissão para leitura." << std::endl;
@@ -69,7 +71,6 @@ int main(int argc, char* argv[])
       while(!input_file.eof())
       {
         getline(input_file, line);
-        if (line.size() == 0) continue;
         std::cout << line << std::endl;
       }
 
@@ -90,6 +91,14 @@ int main(int argc, char* argv[])
     write_in_file(message);
     std::cout << "Mensagem Adicionada!" << std::endl;
     return 0;
+  }
+
+  // caso mais de 2 parametros
+  if (argc > 3)
+  {
+    std::cerr << "Parametro inválido." << std::endl;
+    show_usage(argv[0]);
+    return 1;
   }
 
   return 0;
@@ -118,7 +127,7 @@ int check_action(const std::string& action)
 
 bool date_exists(std::string& date)
 {
-  std::ifstream file{"diario.txt"};
+  std::ifstream file{OUTPUT_FILE};
   std::string line;
   while (!file.eof())
   {
@@ -130,7 +139,7 @@ bool date_exists(std::string& date)
 
 int write_in_file(const std::string& message)
 {
-  std::ofstream output_file{"diario.txt", std::ios::app};
+  std::ofstream output_file{OUTPUT_FILE, std::ios::app};
   if (!output_file.is_open()) 
   {
     std::cerr << "O arquivo não pode ser aberto." << std::endl;
@@ -140,7 +149,7 @@ int write_in_file(const std::string& message)
   std::string today = get_current_date();
   std::string now = get_current_time();
 
-  if (!date_exists(today)) output_file << "# " << today << std::endl;
+  if (!date_exists(today)) output_file << "\n# " << today << std::endl;
   output_file << "- " << now << " " << message << std::endl;
   output_file.close();
   return 0;
