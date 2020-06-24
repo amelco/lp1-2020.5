@@ -1,5 +1,7 @@
 #include "App.h"
 
+#define DEBUG true
+
 #include <string>
 #include <iostream>
 
@@ -46,7 +48,9 @@ void App::add()
 
 void App::add(const std::string& message)
 {
+  #if DEBUG
   std::cout << "Adicionando 10x a msg na array" << std::endl;
+  #endif
   for (size_t i = 0; i < 15; i++)
   {
     if( !diary.add(message) ) std::cout << "Número máximo de mensagens excedido." << std::endl;

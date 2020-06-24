@@ -1,6 +1,6 @@
 #include "Diary.h"
 
-#define DEBUG false
+#define DEBUG true
 #if DEBUG
   #include <iostream>
 #endif
