@@ -1,13 +1,14 @@
 #include "App.h"
 
-#define DEBUG true
+#define DEBUG std::cout << "aqui" << std::endl;
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 App::App(std::string& filename) : diary(filename)
 {
-  std::cout << "Abrindo/criando arquivo de saida (ex. diary.md)" << std::endl;
+
 }
 
 int App::run(int argc, char* argv[])
@@ -54,15 +55,20 @@ void App::add(const std::string& message)
 
 void App::list_messages()
 {
-  for (size_t i = 0; i < diary.messages_size; ++i)
+  std::ifstream file(diary.filename);
+  while (!file.eof())
   {
-    const Message& message = diary.messages[i];
-    std::cout << message.content << std::endl;
+    std::string line;
+    std::getline(file, line);
+    if (line.size() != 0) std::cout << line << std::endl;
   }
+  file.close();
 }
 
 int App::show_usage()
 {
-  std::cout << "TODO: USage" << std::endl;
+  std::cout << "Usage: diary [option]\nOptions:" << std::endl;
+  std::cout << "\tadd <message>\tAdiciona mensagem ao diário" << std::endl;
+  std::cout << "\tlist\t\tLista mensagens do diário" << std::endl;
   return 1;
 }
