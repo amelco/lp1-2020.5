@@ -1,11 +1,12 @@
 #include "Diary.h"
 
-#define DEBUG true
+#define DEBUG false
 #if DEBUG
   #include <iostream>
 #endif
 
 #include <string>
+#include <fstream>
 
 Diary::Diary(const std::string &_filename) : filename(_filename)
 {
@@ -29,7 +30,11 @@ bool Diary::add(const std::string &message)
   #endif
   return true;
 }
-void Diary::write()
+bool Diary::write()
 {
-  
+  std::ofstream file(filename, std::ios::app);
+  if (file.fail()) return false;
+  file << messages[messages_size -1].content << std::endl;
+  file.close();
+  return true;
 }

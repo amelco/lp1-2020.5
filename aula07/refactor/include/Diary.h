@@ -15,7 +15,7 @@ struct Diary
   size_t messages_capacity; // tamanho da mensagem
 
   bool add(const std::string& message); // adiciona mensagem na lista de mensagens
-  void write();   // escreve no arquivo
+  bool write();   // escreve no arquivo
 };
 
 #endif

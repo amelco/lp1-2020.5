@@ -13,6 +13,9 @@ int main(int argc, char const *argv[])
     }
     assert(diario.messages_size == 10);
     std::cout << "Passou teste de tamanho de lista." << std::endl;
-    
+
+    assert( diario.write() );
+    std::cout << "Passou teste de escrita no arquivo." << std::endl;
+
     return 0;
 }
