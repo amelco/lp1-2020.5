@@ -47,7 +47,7 @@ void App::add()
 void App::add(const std::string& message)
 {
   std::cout << "Adicionando 10x a msg na array" << std::endl;
-  for (size_t i = 0; i < 10; i++)
+  for (size_t i = 0; i < 15; i++)
   {
     if( !diary.add(message) ) std::cout << "Número máximo de mensagens excedido." << std::endl;
   }
