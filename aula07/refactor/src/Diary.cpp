@@ -10,6 +10,11 @@ Diary::Diary(const std::string &_filename) : filename(_filename)
 
 }
 
+Diary::~Diary()
+{
+  delete[] messages;
+}
+
 bool Diary::add(const std::string &message)
 {
   if (messages_size >= messages_capacity) return false;
