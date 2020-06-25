@@ -1,5 +1,5 @@
 #include "Diary.h"
-// #include "Utils.h"
+#include "Utils.h"
 
 #include <string>
 #include <fstream>
@@ -35,10 +35,10 @@ bool Diary::add(const std::string &message)
 {
   if (messages_size >= messages_capacity) return false;
   Message msg;
-  // Utils utils;
+  Utils utils;
   msg.content = message;
-  // msg.date.set_from_string(utils.get_current_date());
-  // msg.time.set_from_string(utils.get_current_time());
+  msg.date.set_from_string(utils.get_current_date());
+  msg.time.set_from_string(utils.get_current_time());
   messages[messages_size] = msg;
   messages_size++;
   return true;
@@ -48,8 +48,7 @@ bool Diary::write()
 {
   std::ofstream file(filename, std::ios::app);
   if (file.fail()) return false;
-  // file << messages[messages_size].time.to_string() << " " << messages[messages_size - 1].content << std::endl;
-  file << messages[messages_size - 1].content << std::endl;
+  file << messages[messages_size - 1].time.to_string() << " " << messages[messages_size - 1].content << std::endl;
   file.close();
   return true;
 }
