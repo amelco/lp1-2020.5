@@ -19,7 +19,7 @@ Diary::Diary(const std::string &_filename) : filename(_filename),
     {
       std::string temp;
       std::getline(file, temp);
-      if (num_linhas < messages_capacity) num_linhas++;
+      num_linhas++;
     }
     messages_size = num_linhas - 1;
   }
@@ -46,6 +46,7 @@ bool Diary::add(const std::string &message)
 
 bool Diary::write()
 {
+  if (messages_size >= messages_capacity) return false;
   std::ofstream file(filename, std::ios::app);
   if (file.fail()) return false;
   file << messages[messages_size - 1].time.to_string() << " " << messages[messages_size - 1].content << std::endl;

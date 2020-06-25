@@ -50,7 +50,7 @@ void App::add()
 void App::add(const std::string& message)
 {
   if ( !diary.add(message) ) std::cerr << "Número máximo de mensagens excedido." << std::endl;
-  if ( !diary.write()      ) std::cerr << "Erro na escrita para o arquivo." << std::endl;
+  if ( !diary.write()      ) std::cerr << "Erro na escrita do arquivo." << std::endl;
 }
 
 void App::list_messages()
