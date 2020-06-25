@@ -67,8 +67,8 @@ void App::list_messages()
 
 int App::show_usage()
 {
-  std::cout << "Usage: diary [option]\nOptions:" << std::endl;
-  std::cout << "\tadd <message>\tAdiciona mensagem ao diário" << std::endl;
+  std::cout << "Usage:\tdiary [option]\nOptions:" << std::endl;
+  std::cout << "\tadd [message]\tAdiciona mensagem ao diário" << std::endl;
   std::cout << "\tlist\t\tLista mensagens do diário" << std::endl;
   return 1;
 }
