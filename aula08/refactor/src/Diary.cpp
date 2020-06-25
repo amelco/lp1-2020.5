@@ -35,7 +35,7 @@ bool Diary::add(const std::string &message)
 {
   if (messages_size >= messages_capacity) return false;
   Message msg;
-  Utils utils;
+  // Utils utils;
   msg.content = message;
   // msg.date.set_from_string(utils.get_current_date());
   // msg.time.set_from_string(utils.get_current_time());
