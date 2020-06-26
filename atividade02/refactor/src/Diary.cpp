@@ -126,7 +126,7 @@ bool Diary::write()
   {
     // adiciona data apenas quando mudar de dia
     if (i == 0) file << messages[i].date.to_string() << std::endl;
-    if (messages[i].date.to_string() != date) file << messages[i].date.to_string() << std::endl;
+    if (messages[i].date.to_string() != date) file << std::endl << messages[i].date.to_string() << std::endl;
     
     file << messages[i].time.to_string() << " ";
     file << messages[i].content << std::endl;
