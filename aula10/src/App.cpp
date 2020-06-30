@@ -84,7 +84,7 @@ void App::search()
 void App::search(const std::string what)
 {
   Message* msg = diary.search(what);
-  if (msg) std::cout << msg->content << std::endl;
+  if (msg) std::cout << msg->content << std::endl;        // verifica se o ponteiro é válido (não aponta pra null)
   else std::cout << "Texto não encontrado." << std::endl;
 }
 
