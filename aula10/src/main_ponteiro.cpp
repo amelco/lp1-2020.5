@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
 
     joaozinho = 20;
 
-    std::cout << joao << std::endl;   //Derreferência
+    std::cout << joao << std::endl;
 
     int n = 10;
     int &n2 = n;
