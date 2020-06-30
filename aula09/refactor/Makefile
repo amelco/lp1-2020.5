@@ -4,10 +4,12 @@ PROGRAMA = diary
 TEST = test
 BIN = bin/
 MATRICULA = 20190003903
+REQUIREMENTS = main.o App.o Date.o Diary.o Time.o
+TEST_REQUIREMENTS = test_main.o App.o Date.o Diary.o Time.o
 
-$(PROGRAMA): main.o App.o Date.o Diary.o Time.o
+$(PROGRAMA): $(REQUIREMENTS)
 	@echo "Gerando binário..."
-	$(GCC) -o $(BIN)$(PROGRAMA) main.o App.o Date.o Diary.o Time.o
+	$(GCC) -o $(BIN)$(PROGRAMA) $(REQUIREMENTS)
 
 main.o: src/main.cpp bin/
 	$(GCC) $(GCC_FLAGS) -c src/main.cpp
@@ -35,8 +37,8 @@ clean:
 	rm *.zip
 	rm bin/*
 
-test: test_main.o App.o Date.o Diary.o Time.o
-	$(GCC) -o $(BIN)$(TEST) test_main.o App.o Date.o Diary.o Time.o
+test: $(TEST_REQUIREMENTS)
+	$(GCC) -o $(BIN)$(TEST) $(TEST_REQUIREMENTS)
 
 pdf: diary.md bin/
 	pandoc diary.md --pdf-engine=pdflatex -o $(BIN)diary.pdf
