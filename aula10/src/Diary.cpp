@@ -141,6 +141,8 @@ bool Diary::write()
 {
   for (size_t i=0; i<=messages_size; ++i)
   {
+    // find(): retorna posição do 1o char do texto encontrado
+    //         retorna tamanho da string caso nao tenha encontrado
     std::size_t found = messages[i].content.find(what);
     if (found < messages[i].content.npos) return &messages[i];
   }
