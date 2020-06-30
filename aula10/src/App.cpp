@@ -32,7 +32,7 @@ int App::run(int argc, char* argv[])
   {
     list_messages();
   }
-  if (action == "search")
+  else if (action == "search")
   {
     if (argc == 2)
     {
@@ -93,6 +93,7 @@ int App::show_usage()
 {
   std::cout << "Usage:\tdiary [option]\nOptions:" << std::endl;
   std::cout << "\tadd [message]\tAdiciona mensagem ao diário" << std::endl;
+  std::cout << "\tsearch [texto]\tPesquisa por 'texto' no diário" << std::endl;
   std::cout << "\tlist\t\tLista mensagens do diário" << std::endl;
   return 1;
 }
