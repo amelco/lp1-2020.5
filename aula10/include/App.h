@@ -17,6 +17,8 @@ struct App
   int show_usage();
   void add();
   void add(const std::string& message);
+  void search();
+  void search(const std::string what);
   void list_messages();
 
 };

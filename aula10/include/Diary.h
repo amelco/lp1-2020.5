@@ -16,10 +16,8 @@ struct Diary
 
   bool add(const std::string& message); // adiciona string mensagem na lista de mensagens
   bool write();   // escreve no arquivo
-
-  // ./diary search bom => retornar a primeira msg encontrada
-  // metodo find() do array
   Message* search(std::string what); // retorna o endereço da msg ou nullptr, caso nao exista
+  //Message* search(std::string what); // retorna o endereço da msg ou nullptr, caso nao exista
 };
 
 #endif

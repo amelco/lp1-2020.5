@@ -1,5 +1,5 @@
 GCC = g++
-GCC_FLAGS = -I include -std=c++11 -Wall -O2
+GCC_FLAGS = -I include -std=c++11 -Wall -g
 PROGRAMA = diary
 TEST = test
 BIN = bin/

@@ -136,3 +136,13 @@ bool Diary::write()
   file.close();
   return true;
 }
+
+ Message* Diary::search(std::string what)
+{
+  for (size_t i=0; i<=messages_size; ++i)
+  {
+    std::size_t found = messages[i].content.find(what);
+    if (found < messages[i].content.npos) return &messages[i];
+  }
+  return nullptr;
+}

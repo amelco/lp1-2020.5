@@ -7,14 +7,18 @@
 #include "Date.h"
 #include "Utils.h"
 
+struct Temp
+{
+    std::string valor;
+};
+
 int main(int argc, char const *argv[])
 {
-    Diary d("teste.md");
-    d.add("CODIGO");
-    d.write();
+    Temp temp;
+    temp.valor = "teste";
+    
+    temp* p;
+    p = &temp;
 
-    for (size_t i=0; i<d.messages_size; ++i)
-    {
-        std::cout << i << d.messages[i].content << std::endl;
-    }
+    
 }

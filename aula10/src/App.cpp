@@ -32,6 +32,17 @@ int App::run(int argc, char* argv[])
   {
     list_messages();
   }
+  if (action == "search")
+  {
+    if (argc == 2)
+    {
+      search();
+    }
+    else
+    {
+      search(argv[2]);
+    }
+  }
   else return show_usage();
   
   return 0;
@@ -61,6 +72,22 @@ void App::list_messages()
     std::cout << diary.messages[i].content << std::endl;
   }
 }
+
+void App::search()
+{
+  std::string what;
+  std::cout << "Enter word to search:" << std::endl;
+  std::getline(std::cin, what);
+  search(what);
+}
+
+void App::search(const std::string what)
+{
+  Message* msg = diary.search(what);
+  if (msg) std::cout << msg->content << std::endl;
+  else std::cout << "Texto não encontrado." << std::endl;
+}
+
 
 int App::show_usage()
 {
