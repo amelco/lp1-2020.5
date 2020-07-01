@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
+#include <algorithm>
 
 struct Qualquer
 {
@@ -12,7 +14,7 @@ int main(int argc, char const *argv[])
 
     std::vector<int> items;
     std::vector<Qualquer> items2;
-    std::vector<std::vector> items3;    // vetor de vetores (matriz)
+    std::vector<std::vector<int>> items3;    // vetor de vetores (matriz)
 
     // containers sempre armazenam na memória heap
     // adicionando items no vector
@@ -80,7 +82,7 @@ int main(int argc, char const *argv[])
     {
         std::cout << *it << std::endl;
     }
-    for ( std::unordered_map<std::string, int>::iterator it = dicionario.begin(); it < dicionario.end(); ++it)
+    for ( std::unordered_map<std::string, int>::iterator it = dicionario.begin(); it != dicionario.end(); ++it)
     {
         // nesse caso, o iterator é do tipo pair, pois precisa de chave e valor
         std::cout << it->first << std::endl;        // chave
@@ -89,7 +91,7 @@ int main(int argc, char const *argv[])
 
     // podemos declarar uma variavel que o compilador infgewre o tipo
     // auto (C++11)
-    for ( auto it = dicionario.begin(); it < dicionario.end(); ++it)
+    for ( auto it = dicionario.begin(); it != dicionario.end(); ++it)
     {
 
     }
@@ -112,7 +114,7 @@ int main(int argc, char const *argv[])
     }
 
     // ordenando 
-    std::sort(dicionario.begin(), dicionario.end());
+    std::sort(items.begin(), items.end());
 
     return 0;
 }
