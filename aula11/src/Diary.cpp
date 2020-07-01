@@ -10,8 +10,6 @@
 #include <iostream>
 
 Diary::Diary(const std::string &_filename) : filename(_filename)
-//                                             messages(nullptr),
-//                                             messages_size(0)
 {
   std::ifstream file(filename);
   if (file.is_open()) // arquivo existe
