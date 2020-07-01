@@ -9,5 +9,3 @@ $ make
 ```bash
 $ bin/diary
 ```
-
-asaas
