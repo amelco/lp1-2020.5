@@ -3,6 +3,7 @@
 
 #include "Message.h"
 #include <string>
+#include <vector>
 
 struct Diary
 {
@@ -10,14 +11,16 @@ struct Diary
   ~Diary();
 
   std::string filename;
-  Message* messages;
-  size_t messages_size;     // numero de mensagens armazenadas
-  size_t messages_capacity; // tamanho da mensagem
+  std::vector<Message> messages;
+  // Message* messages;
+  // size_t messages_size;     // numero de mensagens armazenadas
+  // size_t messages_capacity; // tamanho da mensagem
 
   bool add(const std::string& message); // adiciona string mensagem na lista de mensagens
   bool write();   // escreve no arquivo
-  Message* search(std::string what); // retorna o endereço da msg ou nullptr, caso nao exista
-  //Message* search(std::string what); // retorna o endereço da msg ou nullptr, caso nao exista
+  std::vector<Message*> search(std::string what);   // retorna um vector de ponteiros de Mesage
+
+  std::string formated_message(Message message);
 };
 
 #endif

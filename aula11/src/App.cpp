@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 App::App(std::string& filename) : diary(filename)
 {
@@ -65,11 +66,9 @@ void App::add(const std::string& message)
 
 void App::list_messages()
 {
-  for (size_t i=0; i<diary.messages_size; ++i)
+  for (size_t i=0; i<diary.messages.size(); ++i)
   {
-    std::cout << diary.messages[i].date.to_string().substr(2,10) << " ";
-    std::cout << diary.messages[i].time.to_string().substr(2,8) << " ";
-    std::cout << diary.messages[i].content << std::endl;
+    std::cout << diary.formated_message(diary.messages[i]) << std::endl;
   }
 }
 
@@ -83,13 +82,18 @@ void App::search()
 
 void App::search(const std::string what)
 {
-  Message* msg = diary.search(what);
-  // verifica se o ponteiro é válido (não aponta pra null)
-  if (msg)
+  std::vector<Message*> msg = diary.search(what);
+
+  if (msg.size() == 0)
   {
-    std::cout << msg->content << std::endl;
+    std::cout << "Texto não encontrado." << std::endl;
+    return;
   }
-  else std::cout << "Texto não encontrado." << std::endl;
+
+  for (size_t i=0; i<msg.size(); ++i)
+  {
+    std::cout << diary.formated_message(*msg[i]) << std::endl;
+  }
 }
 
 
