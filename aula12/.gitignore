@@ -1,0 +1,8 @@
+*.o
+*.swp
+**/*.swp
+**/*.o
+diary
+diary.md
+diary2.md
+teste.md
