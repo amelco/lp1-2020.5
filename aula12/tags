@@ -1,0 +1,182 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+$(PROGRAMA)	Makefile	/^$(PROGRAMA): $(REQUIREMENTS)$/;"	t
+*.tcc	.vscode/settings.json	/^        "*.tcc": "cpp",$/;"	s	object:files.associations
+0	.vscode/launch.json	/^                {$/;"	o	array:configurations.0.setupCommands
+0	.vscode/launch.json	/^        {$/;"	o	array:configurations
+0	.vscode/tasks.json	/^        {$/;"	o	array:tasks
+01/07/2020	diary.md	/^# 01\/07\/2020$/;"	c
+01/07/2020	diary2.md	/^# 01\/07\/2020$/;"	c
+02/07/2020	diary.md	/^# 02\/07\/2020$/;"	c
+22/06/2020	diary.md	/^# 22\/06\/2020$/;"	c
+22/06/2020	diary2.md	/^# 22\/06\/2020$/;"	c
+23/06/2020	diary.md	/^# 23\/06\/2020$/;"	c
+23/06/2020	diary2.md	/^# 23\/06\/2020$/;"	c
+25/06/2020	diary.md	/^# 25\/06\/2020$/;"	c
+25/06/2020	diary2.md	/^# 25\/06\/2020$/;"	c
+26/06/2020	diary.md	/^# 26\/06\/2020$/;"	c
+26/06/2020	diary2.md	/^# 26\/06\/2020$/;"	c
+26/06/2020	teste.md	/^# 26\/06\/2020$/;"	c
+29/06/2020	diary.md	/^# 29\/06\/2020$/;"	c
+29/06/2020	diary2.md	/^# 29\/06\/2020$/;"	c
+29/06/2020	teste.md	/^# 29\/06\/2020$/;"	c
+APP_H	include/App.h	/^#define APP_H$/;"	d
+App	include/App.h	/^struct App$/;"	s
+App	src/App.cpp	/^App::App(std::string& filename) : diary(filename)$/;"	f	class:App
+App.o	Makefile	/^App.o: src\/App.cpp include\/App.h$/;"	t
+BIN	Makefile	/^BIN = bin\/$/;"	m
+DATE_H	include/Date.h	/^#define DATE_H$/;"	d
+DEBUG	src/App.cpp	/^#define DEBUG /;"	d	file:
+DEBUG	src/Diary.cpp	/^#define DEBUG /;"	d	file:
+DIARY_H	include/Diary.h	/^#define DIARY_H$/;"	d
+Date	include/Date.h	/^struct Date$/;"	s
+Date	src/Date.cpp	/^Date::Date(): year(0), month(0), day(0)$/;"	f	class:Date
+Date.o	Makefile	/^Date.o: src\/Date.cpp include\/Date.h$/;"	t
+Diary	include/Diary.h	/^struct Diary$/;"	s
+Diary	src/Diary.cpp	/^Diary::Diary(const std::string &_filename) : filename(_filename)$/;"	f	class:Diary
+Diary.o	Makefile	/^Diary.o: src\/Diary.cpp include\/Diary.h$/;"	t
+GCC	Makefile	/^GCC = g++$/;"	m
+MATRICULA	Makefile	/^MATRICULA = 20190003903$/;"	m
+MESSAGE_H	include/Message.h	/^#define MESSAGE_H$/;"	d
+MIMode	.vscode/launch.json	/^            "MIMode": "gdb",$/;"	s	object:configurations.0
+Message	include/Message.h	/^struct Message$/;"	s
+MyStruct	src/main_ponteiro.cpp	/^struct MyStruct {$/;"	s	file:
+PROGRAMA	Makefile	/^PROGRAMA = diary$/;"	m
+Qualquer	src/main_conteiner.cpp	/^struct Qualquer$/;"	s	file:
+REQUIREMENTS	Makefile	/^REQUIREMENTS = main.o App.o Date.o Diary.o Time.o$/;"	m
+TEST	Makefile	/^TEST = test$/;"	m
+TEST_REQUIREMENTS	Makefile	/^TEST_REQUIREMENTS = test_main.o App.o Date.o Diary.o Time.o$/;"	m
+TIME_H	include/Time.h	/^#define TIME_H$/;"	d
+Temp	src/test_main.cpp	/^struct Temp$/;"	s	file:
+Time	include/Time.h	/^struct Time$/;"	s
+Time	src/Time.cpp	/^Time::Time() : hour(0), minute(0), second(0)$/;"	f	class:Time
+Time.o	Makefile	/^Time.o: src\/Time.cpp include\/Time.h$/;"	t
+Utils	include/Utils.h	/^struct Utils$/;"	s
+add	src/App.cpp	/^void App::add()$/;"	f	class:App	typeref:typename:void
+add	src/App.cpp	/^void App::add(const std::string& message)$/;"	f	class:App	typeref:typename:void
+add	src/Diary.cpp	/^bool Diary::add(const std::string &message)$/;"	f	class:Diary	typeref:typename:bool
+algorithm	.vscode/settings.json	/^        "algorithm": "cpp",$/;"	s	object:files.associations
+all	Makefile	/^all: $(PROGRAMA) test pdf zip$/;"	t
+args	.vscode/launch.json	/^            "args": [],$/;"	a	object:configurations.0
+array	.vscode/settings.json	/^        "array": "cpp",$/;"	s	object:files.associations
+atomic	.vscode/settings.json	/^        "atomic": "cpp",$/;"	s	object:files.associations
+bin/	Makefile	/^bin\/:$/;"	t
+bit	.vscode/settings.json	/^        "bit": "cpp",$/;"	s	object:files.associations
+cctype	.vscode/settings.json	/^        "cctype": "cpp",$/;"	s	object:files.associations
+clean	Makefile	/^clean:$/;"	t
+clocale	.vscode/settings.json	/^        "clocale": "cpp",$/;"	s	object:files.associations
+cmath	.vscode/settings.json	/^        "cmath": "cpp",$/;"	s	object:files.associations
+command	.vscode/tasks.json	/^            "command": "make",$/;"	s	object:tasks.0
+configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
+content	include/Message.h	/^  std::string content;$/;"	m	struct:Message	typeref:typename:std::string
+cstdarg	.vscode/settings.json	/^        "cstdarg": "cpp",$/;"	s	object:files.associations
+cstddef	.vscode/settings.json	/^        "cstddef": "cpp",$/;"	s	object:files.associations
+cstdint	.vscode/settings.json	/^        "cstdint": "cpp",$/;"	s	object:files.associations
+cstdio	.vscode/settings.json	/^        "cstdio": "cpp",$/;"	s	object:files.associations
+cstdlib	.vscode/settings.json	/^        "cstdlib": "cpp",$/;"	s	object:files.associations
+ctime	.vscode/settings.json	/^        "ctime": "cpp",$/;"	s	object:files.associations
+cwchar	.vscode/settings.json	/^        "cwchar": "cpp",$/;"	s	object:files.associations
+cwctype	.vscode/settings.json	/^        "cwctype": "cpp",$/;"	s	object:files.associations
+cwd	.vscode/launch.json	/^            "cwd": "${workspaceFolder}",$/;"	s	object:configurations.0
+date	include/Message.h	/^  Date date;$/;"	m	struct:Message	typeref:typename:Date
+day	include/Date.h	/^  unsigned int day;$/;"	m	struct:Date	typeref:typename:unsigned int
+deque	.vscode/settings.json	/^        "deque": "cpp",$/;"	s	object:files.associations
+description	.vscode/launch.json	/^                    "description": "Enable pretty-printing for gdb",$/;"	s	object:configurations.0.setupCommands.0
+diary	include/App.h	/^  Diary diary;$/;"	m	struct:App	typeref:typename:Diary
+environment	.vscode/launch.json	/^            "environment": [],$/;"	a	object:configurations.0
+exception	.vscode/settings.json	/^        "exception": "cpp",$/;"	s	object:files.associations
+externalConsole	.vscode/launch.json	/^            "externalConsole": false,$/;"	b	object:configurations.0
+filename	include/Diary.h	/^  std::string filename;$/;"	m	struct:Diary	typeref:typename:std::string
+files.associations	.vscode/settings.json	/^    "files.associations": {$/;"	o
+format_current_date	include/Utils.h	/^    std::string format_current_date(const std::string &format)$/;"	f	struct:Utils	typeref:typename:std::string
+formated_message	src/Diary.cpp	/^std::string Diary::formated_message(Message message)$/;"	f	class:Diary	typeref:typename:std::string
+fstream	.vscode/settings.json	/^        "fstream": "cpp",$/;"	s	object:files.associations
+funcao	src/main_ponteiro.cpp	/^    void funcao() {}$/;"	f	struct:MyStruct	typeref:typename:void	file:
+functional	.vscode/settings.json	/^        "functional": "cpp",$/;"	s	object:files.associations
+get_current_date	include/Utils.h	/^    std::string get_current_date() $/;"	f	struct:Utils	typeref:typename:std::string
+get_current_time	include/Utils.h	/^    std::string get_current_time() $/;"	f	struct:Utils	typeref:typename:std::string
+group	.vscode/tasks.json	/^            "group": {$/;"	o	object:tasks.0
+hash_map	.vscode/settings.json	/^        "hash_map": "cpp",$/;"	s	object:files.associations
+hour	include/Time.h	/^  unsigned int hour;$/;"	m	struct:Time	typeref:typename:unsigned int
+ignoreFailures	.vscode/launch.json	/^                    "ignoreFailures": true$/;"	b	object:configurations.0.setupCommands.0
+initializer_list	.vscode/settings.json	/^        "initializer_list": "cpp",$/;"	s	object:files.associations
+iomanip	.vscode/settings.json	/^        "iomanip": "cpp",$/;"	s	object:files.associations
+iosfwd	.vscode/settings.json	/^        "iosfwd": "cpp",$/;"	s	object:files.associations
+iostream	.vscode/settings.json	/^        "iostream": "cpp",$/;"	s	object:files.associations
+isDefault	.vscode/tasks.json	/^                "isDefault": true$/;"	b	object:tasks.0.group
+istream	.vscode/settings.json	/^        "istream": "cpp",$/;"	s	object:files.associations
+iterator	.vscode/settings.json	/^        "iterator": "cpp",$/;"	s	object:files.associations
+kind	.vscode/tasks.json	/^                "kind": "build",$/;"	s	object:tasks.0.group
+label	.vscode/tasks.json	/^            "label": "build",$/;"	s	object:tasks.0
+limits	.vscode/settings.json	/^        "limits": "cpp",$/;"	s	object:files.associations
+list	.vscode/settings.json	/^        "list": "cpp",$/;"	s	object:files.associations
+list_messages	src/App.cpp	/^void App::list_messages()$/;"	f	class:App	typeref:typename:void
+main	src/main.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	src/main_conteiner.cpp	/^int main(int argc, char const *argv[])$/;"	f	typeref:typename:int
+main	src/main_ponteiro.cpp	/^int main(int argc, char const *argv[])$/;"	f	typeref:typename:int
+main	src/test_main.cpp	/^int main(int argc, char const *argv[])$/;"	f	typeref:typename:int
+main.o	Makefile	/^main.o: src\/main.cpp bin\/$/;"	t
+memory	.vscode/settings.json	/^        "memory": "cpp",$/;"	s	object:files.associations
+memory_resource	.vscode/settings.json	/^        "memory_resource": "cpp",$/;"	s	object:files.associations
+messages	include/Diary.h	/^  std::vector<Message> messages;$/;"	m	struct:Diary	typeref:typename:std::vector<Message>
+minute	include/Time.h	/^  unsigned int minute;$/;"	m	struct:Time	typeref:typename:unsigned int
+month	include/Date.h	/^  unsigned int month;$/;"	m	struct:Date	typeref:typename:unsigned int
+name	.vscode/launch.json	/^            "name": "(gdb) Launch",$/;"	s	object:configurations.0
+new	.vscode/settings.json	/^        "new": "cpp",$/;"	s	object:files.associations
+numeric	.vscode/settings.json	/^        "numeric": "cpp",$/;"	s	object:files.associations
+optional	.vscode/settings.json	/^        "optional": "cpp",$/;"	s	object:files.associations
+ostream	.vscode/settings.json	/^        "ostream": "cpp",$/;"	s	object:files.associations
+pdf	Makefile	/^pdf: diary.md bin\/$/;"	t
+por_copia	src/main_ponteiro.cpp	/^void por_copia(int a)$/;"	f	typeref:typename:void
+por_ponteiro	src/main_ponteiro.cpp	/^void por_ponteiro(int *a)$/;"	f	typeref:typename:void
+por_referencia	src/main_ponteiro.cpp	/^void por_referencia(int &a) \/\/ aqui, a é apelido$/;"	f	typeref:typename:void
+preLaunchTask	.vscode/launch.json	/^            "preLaunchTask": "build"$/;"	s	object:configurations.0
+problemMatcher	.vscode/tasks.json	/^            "problemMatcher": "$gcc"$/;"	s	object:tasks.0
+program	.vscode/launch.json	/^            "program": "${workspaceFolder}\/bin\/diary",$/;"	s	object:configurations.0
+ptn	src/main_ponteiro.cpp	/^    int* ptn;$/;"	m	struct:MyStruct	typeref:typename:int *	file:
+random	.vscode/settings.json	/^        "random": "cpp",$/;"	s	object:files.associations
+request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
+run	src/App.cpp	/^int App::run(int argc, char* argv[])$/;"	f	class:App	typeref:typename:int
+search	src/App.cpp	/^void App::search()$/;"	f	class:App	typeref:typename:void
+search	src/App.cpp	/^void App::search(const std::string what)$/;"	f	class:App	typeref:typename:void
+search	src/Diary.cpp	/^ std::vector<Message*> Diary::search(std::string what)$/;"	f	class:Diary	typeref:typename:std::vector<Message * >
+second	include/Time.h	/^  unsigned int second;$/;"	m	struct:Time	typeref:typename:unsigned int
+set_from_string	src/Date.cpp	/^void Date::set_from_string(const std::string& date)$/;"	f	class:Date	typeref:typename:void
+set_from_string	src/Time.cpp	/^void Time::set_from_string(const std::string& time)$/;"	f	class:Time	typeref:typename:void
+setupCommands	.vscode/launch.json	/^            "setupCommands": [$/;"	a	object:configurations.0
+show_usage	src/App.cpp	/^int App::show_usage()$/;"	f	class:App	typeref:typename:int
+sstream	.vscode/settings.json	/^        "sstream": "cpp",$/;"	s	object:files.associations
+stdexcept	.vscode/settings.json	/^        "stdexcept": "cpp",$/;"	s	object:files.associations
+stopAtEntry	.vscode/launch.json	/^            "stopAtEntry": false,$/;"	b	object:configurations.0
+streambuf	.vscode/settings.json	/^        "streambuf": "cpp",$/;"	s	object:files.associations
+string	.vscode/settings.json	/^        "string": "cpp",$/;"	s	object:files.associations
+string_view	.vscode/settings.json	/^        "string_view": "cpp",$/;"	s	object:files.associations
+system_error	.vscode/settings.json	/^        "system_error": "cpp",$/;"	s	object:files.associations
+tasks	.vscode/tasks.json	/^    "tasks": [$/;"	a
+test	Makefile	/^test: $(TEST_REQUIREMENTS)$/;"	t
+test_main.o	Makefile	/^test_main.o: src\/test_main.cpp bin\/$/;"	t
+text	.vscode/launch.json	/^                    "text": "-enable-pretty-printing",$/;"	s	object:configurations.0.setupCommands.0
+time	include/Message.h	/^  Time time;$/;"	m	struct:Message	typeref:typename:Time
+to_string	src/Date.cpp	/^std::string Date::to_string()$/;"	f	class:Date	typeref:typename:std::string
+to_string	src/Time.cpp	/^std::string Time::to_string()$/;"	f	class:Time	typeref:typename:std::string
+tuple	.vscode/settings.json	/^        "tuple": "cpp",$/;"	s	object:files.associations
+type	.vscode/launch.json	/^            "type": "cppdbg",$/;"	s	object:configurations.0
+type	.vscode/tasks.json	/^            "type": "shell",$/;"	s	object:tasks.0
+type_traits	.vscode/settings.json	/^        "type_traits": "cpp",$/;"	s	object:files.associations
+typeinfo	.vscode/settings.json	/^        "typeinfo": "cpp"$/;"	s	object:files.associations
+unordered_map	.vscode/settings.json	/^        "unordered_map": "cpp",$/;"	s	object:files.associations
+utility	.vscode/settings.json	/^        "utility": "cpp",$/;"	s	object:files.associations
+valor	src/main_conteiner.cpp	/^    int valor;$/;"	m	struct:Qualquer	typeref:typename:int	file:
+valor	src/test_main.cpp	/^    std::string valor;$/;"	m	struct:Temp	typeref:typename:std::string	file:
+variable	src/main_ponteiro.cpp	/^    int variable;$/;"	m	struct:MyStruct	typeref:typename:int	file:
+vector	.vscode/settings.json	/^        "vector": "cpp",$/;"	s	object:files.associations
+write	src/Diary.cpp	/^bool Diary::write()$/;"	f	class:Diary	typeref:typename:bool
+year	include/Date.h	/^  unsigned int year;$/;"	m	struct:Date	typeref:typename:unsigned int
+zip	Makefile	/^zip:$/;"	t
+~Diary	src/Diary.cpp	/^Diary::~Diary()$/;"	f	class:Diary
