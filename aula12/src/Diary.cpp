@@ -11,6 +11,7 @@
 
 Diary::Diary(const std::string &_filename) : filename(_filename)
 {
+  format = "[%d %t] %m";
   std::ifstream file(filename);
   if (file.is_open()) // arquivo existe
   {
@@ -107,10 +108,28 @@ bool Diary::write()
 std::string Diary::formated_message(Message message)
 {
   std::stringstream stream;
-  
+
+  for (size_t i=0; i<format.length(); ++i)
+  {
+    if (format[i] == '%')
+    {
+      if (format[i+1] == 'd') { stream << message.date.to_string().substr(2,10); ++i;}
+      else if (format[i+1] == 't') { stream << message.time.to_string().substr(2,8); ++i;}
+      else if (format[i+1] == 'm') { stream << message.content; ++i;}
+      else stream << format[i];
+    }
+    else
+    {
+      stream << format[i];
+    }
+    
+  }
+ 
+  /*
   stream << message.date.to_string().substr(2,10) << " ";
   stream << message.time.to_string().substr(2,8) << " ";
   stream << message.content;
+  */
 
   return stream.str();
 }

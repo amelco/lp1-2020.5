@@ -12,6 +12,7 @@ struct Diary
 
   std::string filename;
   std::vector<Message> messages;
+  std::string format;
 
   bool add(const std::string& message); // adiciona string mensagem na lista de mensagens
   bool write();   // escreve no arquivo
