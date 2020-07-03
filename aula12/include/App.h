@@ -20,6 +20,7 @@ struct App
   void search();
   void search(const std::string what);
   void list_messages();
+  void interactive_mode();
 
 };
 

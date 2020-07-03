@@ -44,6 +44,10 @@ int App::run(int argc, char* argv[])
       search(argv[2]);
     }
   }
+  else if (action == "interactive")
+  {
+    interactive_mode();
+  }
   else return show_usage();
   
   return 0;
@@ -96,6 +100,34 @@ void App::search(const std::string what)
   }
 }
 
+void App::interactive_mode()
+{
+  char op;
+
+  std::string home_screen = "Diário 0.1\n\n\n";
+  home_screen += "Selecione uma opção:\n\n";
+  home_screen += "1) Listar mensagens\n";
+  home_screen += "2) Adicionar nova mensagem\n\n";
+  home_screen += "0) Finalizar\n\n";
+  home_screen += "Opção: ";
+  
+  while (op != '0')
+  {
+    std::cout << home_screen;
+    std::cin >> op;
+    std::cin.ignore(1);   // lê somente um char e limpa buffer
+
+    if (op == '1')
+    {
+      std::cout << std::endl;
+      list_messages();
+      std::cout << "\nPressione Enter para continuar..." << std::endl;
+      std::cin.ignore();
+    }
+    else if (op == '2') add();
+  }
+  std::cout << "\nAté breve.\n" << std::endl;
+}
 
 int App::show_usage()
 {
