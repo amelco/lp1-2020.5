@@ -16,9 +16,4 @@ int main(int argc, char const *argv[])
 {
     Temp temp;
     temp.valor = "teste";
-    
-    temp* p;
-    p = &temp;
-
-    
 }

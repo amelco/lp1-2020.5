@@ -11,7 +11,40 @@
 
 Diary::Diary(const std::string &_filename) : filename(_filename)
 {
-  format = "[%d %t] %m";
+  std::string path_conf_file = "bin/diary.config";
+  // verifica arquivo de configuração
+  std::ifstream conf_file(path_conf_file);
+  if (conf_file.fail())
+  {
+    // cria novo conf file
+    format = "%d %t: %m";
+    filename = "diary.md";
+    std::ofstream new_conf_file(path_conf_file);
+    new_conf_file << "path=" << filename << std::endl;
+    new_conf_file << "format=" << format << std::endl;
+    new_conf_file.close();
+  }
+  else
+  {
+    // le do conf file existente
+    while (!conf_file.eof())
+    {
+      std::string line;
+      std::string param;
+      std::getline(conf_file, line);
+      std::size_t pos_sep = line.find('=');
+      if (pos_sep < std::string::npos)   // caso '=' nao exista, std::string::npos é igual ao tamanho da string
+        param = line.substr(0,pos_sep);
+      if (param == "path") filename = line.substr(pos_sep+1);
+      if (param == "format") format = line.substr(pos_sep+1);
+    }
+  }
+
+  //std::cout << "DEBUG\n" << filename << std::endl << format << std::endl;
+
+  conf_file.close();
+
+  // verifica arquivo do diario
   std::ifstream file(filename);
   if (file.is_open()) // arquivo existe
   {

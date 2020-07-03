@@ -34,8 +34,8 @@ bin/:
 
 clean:
 	rm *.o
-	rm *.zip
 	rm bin/*
+	rm *.zip
 
 test: $(TEST_REQUIREMENTS)
 	$(GCC) -o $(BIN)$(TEST) $(TEST_REQUIREMENTS)
