@@ -16,7 +16,6 @@ Conta.o: src/Conta.cpp include/Conta.h
 
 clean:
 	rm *.o
-	rm -rf bin
 
 all: $(PROGRAMA)
 
