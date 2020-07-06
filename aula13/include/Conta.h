@@ -17,4 +17,4 @@ class Conta
         Conta(std::string _titular, std::string _numero);
 };
 
-#endif CONTA_H
+#endif  // CONTA_H
