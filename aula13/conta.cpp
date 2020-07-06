@@ -18,5 +18,5 @@ void Conta::deposita(double valor)
 void Conta::transfere(double valor, Conta &conta)
 {
     conta.deposita(valor);
-    saldo -= valor;
+    this->saldo -= valor;
 }
