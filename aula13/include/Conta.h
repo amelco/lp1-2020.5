@@ -9,6 +9,7 @@ class Conta
         std::string numero;
         std::string titular;
         double saldo;
+        bool cheque_especial;
 
         void saca(double valor);
         void deposita(double valor);
