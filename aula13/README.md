@@ -1,3 +1,3 @@
-**compilando:** `g++ -o conta conta.cpp main.cpp`
+**compilando:** `make`
 
 **executando:** `./conta` 
