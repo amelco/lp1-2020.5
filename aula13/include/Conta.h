@@ -1,3 +1,6 @@
+#ifndef CONTA_H
+#define CONTA_H
+
 #include <string>
 
 class Conta
@@ -13,3 +16,5 @@ class Conta
 
         Conta(std::string _titular, std::string _numero);
 };
+
+#endif CONTA_H

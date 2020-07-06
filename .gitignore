@@ -2,8 +2,4 @@
 *.swp
 **/*.swp
 **/*.o
-bin/diary
-bin/test
-diary.md
-diary2.md
-teste.md
+bin/

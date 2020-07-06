@@ -1,4 +1,4 @@
-#include "conta.h"
+#include "Conta.h"
 
 Conta::Conta(std::string _titular, std::string _numero) : titular(_titular), numero(_numero)
 {
