@@ -1,0 +1,3 @@
+**compilando:** `make`
+
+**executando:** `./conta` 
