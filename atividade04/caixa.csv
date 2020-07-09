@@ -1,6 +1,6 @@
 COD,NOME,PREÇO,QTD
-1,Feijão,R$ 6.2,2
-2,Arroz,R$ 3.4,2
+1,Feijão,R$ 6.2,6
+2,Arroz,R$ 3.4,1
 3,Fubá,R$ 2.9,0
 4,Milho Verde,R$ 1.3,0
 5,Ervilha,R$ 1.3,0
@@ -9,11 +9,11 @@ COD,NOME,PREÇO,QTD
 8,Laranja,R$ 3.5,0
 9,Limão,R$ 3.5,0
 10,Macaxeira,R$ 4.5,0
-11,Pimentão,R$ 3.3,0
+11,Pimentão,R$ 3.3,3
 12,Queijo,R$ 28,0
 13,Presunto,R$ 14,0
 14,Carne,R$ 24.92,0
 15,Salsicha,R$ 8.49,0
 16,Peixe,R$ 12.45,0
-17,Margarina,R$ 2.99,1
-TOTAL VENDIDO:,,22.19,
+17,Margarina,R$ 2.99,0
+TOTAL VENDIDO:,,50.5,

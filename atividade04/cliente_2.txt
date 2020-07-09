@@ -1,0 +1,5 @@
+COD,NOME,PREÇO,QTD
+11,Pimentão,R$ 3.3,1
+2,Arroz,R$ 3.4,1
+1,Feijão,R$ 6.2,6
+TOTAL GASTO:,,43.9,

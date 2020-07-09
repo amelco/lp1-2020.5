@@ -17,14 +17,28 @@ int main(int argc, char* argv[])
     //std::cout<< e1.caixa() << std::endl;
 
     Cliente c1;
-    if (!c1.comprar(17)) std::cout << "erro na compra" << std::endl;
-    if (!c1.comprar(1)) std::cout << "erro na compra" << std::endl;
+    c1.comprar(11);
+    c1.comprar(11);
     std::cout << c1.verSacola() << std::endl;
 
     Cliente c2;
-    if (!c2.comprar(1)) std::cout << "erro na compra" << std::endl;
-    if (!c2.comprar(2)) std::cout << "erro na compra" << std::endl;
-    if (!c2.comprar(2)) std::cout << "erro na compra" << std::endl;
+    c2.comprar(11);
+    c2.comprar(2);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
+    c2.comprar(1);
     std::cout << c2.verSacola() << std::endl;
 
     return 0;

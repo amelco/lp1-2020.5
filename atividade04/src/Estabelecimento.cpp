@@ -112,21 +112,21 @@ std::string Estabelecimento::caixa()
 
 bool Estabelecimento::vender(int codigo)
 {
-    bool existe = false;
     // percorre produtos
     for (size_t i=0; i<produtos.size()-1; ++i)
     {
         // checa se o produto é o que se quer comprar
         if (produtos[i].codigo == codigo)
         {
-            existe = true;
             // diminui a qtd do produto
-            if (produtos[i].quantidade == 0) return false;
+            if (produtos[i].quantidade == 0) 
+            {
+                std::cout << "Produto não disponível." << std::endl;
+                return false;
+            }
             produtos[i].quantidade--;
         }
     }
-
-    if (!existe) return false;
 
     // percorre lista do vendidos
     for (size_t i=0; i<vendidos.size()-1; ++i)
