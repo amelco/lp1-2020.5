@@ -1,7 +1,7 @@
 GCC = g++
 GCC_FLAGS = -I include -std=c++11 -Wall -g
 PROGRAMA = supermercado
-REQUIREMENTS = main.o Cliente.o Estabelecimento.o
+REQUIREMENTS = main.o Cliente.o Estabelecimento.o App.o
 
 $(PROGRAMA): $(REQUIREMENTS)
 	@echo "Gerando binário..."
@@ -16,11 +16,17 @@ Cliente.o: src/Cliente.cpp include/Cliente.h
 Estabelecimento.o: src/Estabelecimento.cpp include/Estabelecimento.h
 	$(GCC) $(GCC_FLAGS) -c src/Estabelecimento.cpp
 
+App.o: src/App.cpp include/App.h
+	$(GCC) $(GCC_FLAGS) -c src/App.cpp
+
 test: src/test.cpp src/Estabelecimento.cpp src/Cliente.cpp
 	$(GCC) $(GCC_FLAGS) -o test src/Estabelecimento.cpp src/test.cpp src/Cliente.cpp
 
 clean:
+	rm *.txt
+	rm caixa.csv
 	rm *.o
+	rm supermercado
 	rm test
 
 all: $(PROGRAMA)

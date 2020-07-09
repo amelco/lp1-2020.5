@@ -1,3 +1,0 @@
-COD,NOME,PREÇO,QTD
-11,Pimentão,R$ 3.3,2
-TOTAL GASTO:,,6.6,

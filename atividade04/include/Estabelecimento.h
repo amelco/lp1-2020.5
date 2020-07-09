@@ -18,8 +18,7 @@ class Estabelecimento
     bool vender(int codigo);
 
     Estabelecimento();
-    //Estabelecimento(std::string filename);
-    //~Estabelecimento();
+    ~Estabelecimento();
 };
 
 #endif  // ESTABELECIMENTO_H

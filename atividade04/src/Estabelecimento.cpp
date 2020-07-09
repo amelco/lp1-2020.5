@@ -43,7 +43,6 @@ Estabelecimento::Estabelecimento()
                 }
                 pos = next_pos+1;
                 valores.push_back(value);
-                //std::cout << value << std::endl;
             }
 
             // atribuindo valores a um produto
@@ -72,6 +71,9 @@ Estabelecimento::Estabelecimento()
     }
 }
 
+Estabelecimento::~Estabelecimento()
+{
+}
 
 std::string Estabelecimento::listar()
 {
@@ -145,13 +147,16 @@ bool Estabelecimento::vender(int codigo)
     double total = 0.0f;
     for (size_t i=0; i<vendidos.size()-1; ++i)
     {
-        output << vendidos[i].codigo << ",";
-        output << vendidos[i].descricao << ",";
-        output << "R$ " << vendidos[i].preco << ",";
-        output << vendidos[i].quantidade << std::endl;
-        total += vendidos[i].preco * vendidos[i].quantidade;
+        if (vendidos[i].quantidade != 0)
+        {
+            output << vendidos[i].codigo << ",";
+            output << vendidos[i].descricao << ",";
+            output << "\"R$ " << vendidos[i].preco << "\",";
+            output << vendidos[i].quantidade << std::endl;
+            total += vendidos[i].preco * vendidos[i].quantidade;
+        }
     }
-    output << "TOTAL VENDIDO:,," << total << "," << std::endl;
+    output << "TOTAL VENDIDO:,,\"R$ " << total << "\"," << std::endl;
 
     output.close();
 
