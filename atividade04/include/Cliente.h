@@ -20,8 +20,6 @@ class Cliente
     std::string verSacola();
     void registro();
 
-    void ver();
-
     Cliente();
     ~Cliente();
 };
