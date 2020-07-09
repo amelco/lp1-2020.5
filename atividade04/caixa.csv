@@ -1,5 +1,5 @@
 COD,NOME,PREÇO,QTD
-1,Feijão,R$ 6.2,1
+1,Feijão,R$ 6.2,0
 2,Arroz,R$ 3.4,0
 3,Fubá,R$ 2.9,0
 4,Milho Verde,R$ 1.3,0
@@ -16,4 +16,4 @@ COD,NOME,PREÇO,QTD
 15,Salsicha,R$ 8.49,0
 16,Peixe,R$ 12.45,0
 17,Margarina,R$ 2.99,2
-TOTAL VENDIDO:,,12.18,
+TOTAL VENDIDO:,,5.98,

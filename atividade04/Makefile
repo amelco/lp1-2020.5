@@ -16,8 +16,8 @@ Cliente.o: src/Cliente.cpp include/Cliente.h
 Estabelecimento.o: src/Estabelecimento.cpp include/Estabelecimento.h
 	$(GCC) $(GCC_FLAGS) -c src/Estabelecimento.cpp
 
-test: src/test.cpp src/Estabelecimento.cpp
-	$(GCC) $(GCC_FLAGS) -o test src/Estabelecimento.cpp src/test.cpp
+test: src/test.cpp src/Estabelecimento.cpp src/Cliente.cpp
+	$(GCC) $(GCC_FLAGS) -o test src/Estabelecimento.cpp src/test.cpp src/Cliente.cpp
 
 clean:
 	rm *.o
