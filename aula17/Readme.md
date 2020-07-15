@@ -8,5 +8,5 @@ $ make
 ## Execução
 Execute:  
 ```
-$ ./empresa
+$ ./conta
 ```
