@@ -4,6 +4,8 @@ Um menu aparecerá com as opções de:
 1. listar produtos do supermaercado  
 2. comprar  
 3. ver sacola de compras  
+4. Listar produtos do fornecedor  
+5. Reabastecer estoque do supermercado  
 0. sair
 
 Escolha a opção desejada.
