@@ -5,7 +5,7 @@ Conta::Conta(std::string _titular, std::string _cpf, std::string _numero) : nume
     this->saldo = 0.0f;
     this->cheque_especial = false;
     this->cliente.set_nome(_titular);
-    this->cliente.set_cpf(_cpf);
+    this->cliente.set_identificacao(_cpf);
     this->agencia.nome = "Fictícia";
     this->agencia.numero = 0001;
 }
